@@ -29,7 +29,7 @@ class Xlyzer:
         tweet_id = tweet.id
         screen_name = (await self._client.get_user_by_id(user_id)).screen_name
         if not f'RT @{screen_name}:' in tweet.text:
-            url = f'https://x.com/{screen_name}/status/{tweet_id}'
+            url = f'https://fxtwitter.com/{screen_name}/status/{tweet_id}'
             return tweet_id, url
         else:
             return None
